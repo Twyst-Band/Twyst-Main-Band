@@ -48,13 +48,13 @@
 /**
  * GPIO config
 **/
-#define DEV_CS_PIN  10
-#define DEV_DC_PIN  7
-#define DEV_RST_PIN 8
+#define DEV_CS_PIN  7
+#define DEV_DC_PIN  2
+#define DEV_RST_PIN 10
 #define DEV_BL_PIN  9
 
-#define TP_RST_PIN 4
-#define TP_INT_PIN 3
+#define TP_RST_PIN 20
+#define TP_INT_PIN 1
 
 /**
  * GPIO read and write

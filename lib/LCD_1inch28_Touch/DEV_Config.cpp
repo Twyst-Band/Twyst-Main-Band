@@ -57,6 +57,7 @@ void GPIO_Init()
 
   //i2c
   Wire.begin();
+  Wire.setClock(100000);
 
   }
 
@@ -70,6 +71,7 @@ UBYTE DEV_I2C_Read_Byte(UBYTE DevAddr, UBYTE RegAddr)
 
   Wire.requestFrom(DevAddr, (byte)1);
   value = Wire.read();
+  Serial.println(value);
 
   return value;
 }
@@ -78,15 +80,22 @@ void DEV_I2C_Read_nByte(UBYTE DevAddr,UBYTE Cmd, UBYTE *data, UBYTE num)
 {
 
 	Wire.beginTransmission(DevAddr);
-	Wire.write(Cmd);
-	// Wire.endTransmission();
-	Wire.requestFrom(DevAddr, num);
 
-	UBYTE i = 0;
-	for(i = 0; i < num; i++) {
-		data[i] =  Wire.read();
-	}
+	Wire.write(Cmd);
+
 	Wire.endTransmission();
+
+    Wire.requestFrom(DevAddr, num);
+
+      UBYTE i = 0;
+
+      for(i = 0; i < num; i++) {
+
+            data[i] =  Wire.read();
+      }
+
+      // Wire.endTransmission();
+
 
 }
 

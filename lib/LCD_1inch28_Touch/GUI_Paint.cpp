@@ -494,7 +494,7 @@ void Paint_DrawString_EN(UWORD Xstart, UWORD Ystart, const char * pString,
     Color_Background : Select the background color of the English character
     Color_Foreground : Select the foreground color of the English character
 ******************************************************************************/
-void Paint_DrawString_CN(UWORD Xstart, UWORD Ystart, const char * pString, cFONT* font, UWORD Color_Background, UWORD Color_Foreground)
+void Paint_DrawString_CN(UWORD Xstart, UWORD Ystart, const unsigned char * pString, cFONT* font, UWORD Color_Background, UWORD Color_Foreground)
 {
  const unsigned char* p_text = pString;
 

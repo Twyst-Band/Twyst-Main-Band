@@ -45,10 +45,6 @@
 #define MAX_WIDTH_FONT          32
 #define OFFSET_BITMAP           
 
-#ifdef __cplusplus
- extern "C" {
-#endif
-
 /* Includes ------------------------------------------------------------------*/
 #include <stdint.h>
 #include <Arduino.h>
@@ -90,9 +86,6 @@ extern cFONT Font12CN;
 extern cFONT Font24CN;
 extern const unsigned char Font16_Table[];
 
-#ifdef __cplusplus
-}
-#endif
   
 #endif /* __FONTS_H */
  

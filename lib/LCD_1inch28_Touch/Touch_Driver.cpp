@@ -136,21 +136,9 @@ Touch_1IN28_XY Touch_1IN28_Get_Point()
 {
     UBYTE data[4];
     DEV_I2C_Read_nByte(address, 0x03, data, 4);
-    
+
     XY.x_point = ((data[0] & 0x0f)<<8) + data[1];
     XY.y_point = ((data[2] & 0x0f)<<8) + data[3];
-    
+
     return XY;
 }
-
-
-
-
-
-
-
-
-
-
-
-
