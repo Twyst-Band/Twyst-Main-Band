@@ -22,7 +22,7 @@
 #define GESTUREID 0x01 //gesture code
 #define None 0x00 		//no gesture
 #define UP 0x01 		//slide up
-#define Down 0x02 		//slide down
+#define DOWN 0x02 		//slide down
 #define LEFT 0x03		//Swipe left
 #define RIGHT 0x04		//Swipe right
 #define CLICK 0x05		//click

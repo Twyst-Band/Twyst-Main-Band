@@ -91,16 +91,16 @@ void LCD_WriteReg(UBYTE da)
 function: 
     Common register initialization
 ******************************************************************************/
-void LCD_Init(void)
+void LCDInit(void)
 {
-  LCD_Reset();
+  	LCD_Reset();
 
   //************* Start Initial Sequence **********// 
  	LCD_WriteReg(0xEF);
 	LCD_WriteReg(0xEB);
 	LCD_WriteData_Byte(0x14); 
 	
-  LCD_WriteReg(0xFE);			 
+  	LCD_WriteReg(0xFE);			 
 	LCD_WriteReg(0xEF); 
 
 	LCD_WriteReg(0xEB);	

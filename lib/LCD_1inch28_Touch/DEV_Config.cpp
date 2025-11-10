@@ -41,13 +41,10 @@ void GPIO_Init()
   analogWrite(DEV_BL_PIN,140);
  }
 
- void Config_Init()
+void protocolInit()
  {
 
   GPIO_Init();
-  
-  //Serial
-  Serial.begin(115200);
   
   //spi
   SPI.setDataMode(SPI_MODE3);
@@ -59,7 +56,7 @@ void GPIO_Init()
   Wire.begin();
   Wire.setClock(100000);
 
-  }
+}
 
 UBYTE DEV_I2C_Read_Byte(UBYTE DevAddr, UBYTE RegAddr)
 {
@@ -71,7 +68,6 @@ UBYTE DEV_I2C_Read_Byte(UBYTE DevAddr, UBYTE RegAddr)
 
   Wire.requestFrom(DevAddr, (byte)1);
   value = Wire.read();
-  Serial.println(value);
 
   return value;
 }

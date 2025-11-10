@@ -79,7 +79,7 @@
  #define  DEV_Set_BL(_Pin, _Value)  analogWrite(_Pin, _Value)
 
 /*-----------------------------------------------------------------------------*/
-void Config_Init();
+void protocolInit();
 uint8_t DEV_I2C_Read_Byte(uint8_t DevAddr, uint8_t RegAddr);
 void DEV_I2C_Write_Byte(uint8_t DevAddr, uint8_t RegAddr, uint8_t value);
 void DEV_I2C_Read_nByte(UBYTE DevAddr,UBYTE Cmd, UBYTE *data, UBYTE num);
